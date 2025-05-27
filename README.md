@@ -13,8 +13,15 @@ This is a desktop virtual pet game inspired by the classic Tamagotchi, built usi
 
 ![image](https://github.com/user-attachments/assets/817a28ba-8494-4e05-b230-9fd4bd870525)
 
-https://github.com/user-attachments/assets/22581575-3714-4d00-8765-2062d02ce25e
-https://github.com/user-attachments/assets/8909093f-a710-424f-a5ce-938029da097e
+
+
+https://github.com/user-attachments/assets/c995ebbb-d356-451f-aaf9-30aa23b2a2a6
+
+
+https://github.com/user-attachments/assets/56b40ef0-9d4a-4744-bad5-7c3a8335db53
+
+
+
 
 
 
