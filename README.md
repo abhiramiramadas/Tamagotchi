@@ -75,18 +75,17 @@ npm start
 📁 Folder Structure
 -------------------
 
-`tamagotchi-electron/
+tamagotchi-electron/
 │
-├── assets/             # All images, gifs, and icons
-├── index.html          # Main UI file
-├── style.css           # Styling
-├── script.js           # Game logic
-├── main.js             # Electron main process
-├── preload.js          # Electron preload script
-├── .gitignore
-└── README.md`
+├── assets/          # All images, gifs, and icons<br>
+├── index.html       # Main UI file<br>
+├── style.css        # Styling<br>
+├── script.js        # Game logic<br>
+├── main.js          # Electron main process<br>
+├── preload.js       # Electron preload script<br>
+├── .gitignore<br>
+└── README.md<br>
 
-* * * * *
 
 💡 Gameplay Logic
 -----------------
