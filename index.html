@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamagotchi’s virtual pet game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="frame">
+    <div class="console-bg"></div>
+    <div class="heart-container">
+      <div class="heart" id="heart1"></div>
+      <div class="heart" id="heart2"></div>
+      <div class="heart" id="heart3"></div>
+    </div>
+    <div class="bg-display" id="bgDisplay"></div>
+    <div class="title" id="title">Tamagotchi’s virtual pet game</div>
+    <div class="cat pixel-cat" id="cat"></div>
+    <div class="buttons">
+      <div class="button eatbutton" id="eatBtn" aria-label="Feed the pet"></div>
+      <div class="button playbutton" id="playBtn" aria-label="Play with the pet"></div>
+      <div class="button sleepbutton" id="sleepBtn" aria-label="Let the pet sleep"></div>
+    </div>
+    <div class="eat-indicator-frame"><div class="eat-icon"></div></div>
+    <div class="play-indicator-frame"><div class="play-icon"></div></div>
+    <div class="sleep-indicator-frame"><div class="sleep-icon"></div></div>
+    <div class="restart" id="restart">
+      <div class="restart-text">RESTART</div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+body {
+  background: transparent;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame {
+  position: relative;
+  width: 553px;
+  height: 261px;
+  background: transparent;
+}
+
+.console-bg {
+  position: absolute;
+  width: 533px;
+  height: 241px;
+  left: 10px;
+  top: 13px;
+  background: url("assets/console.png");
+  background-size: cover;
+  border: transparent;
+  z-index: 2;
+}
+
+/* ✅ Heart Container - Initially Hidden */
+.heart-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 227px;
+  height: 20px;
+  left: 235px;
+  top: 69px;
+  z-index: 7;
+}
+
+.heart-container.hidden {
+  display: none;
+}
+
+.heart {
+  width: 20px;
+  height: 20px;
+  background: url("assets/heart.png");
+  background-size: cover;
+  margin: 0 5px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.bg-display {
+  position: absolute;
+  width: 227px;
+  height: 151px;
+  left: 164px;
+  top: 59px;
+  background-size: cover;
+  z-index: 1;
+}
+
+.title {
+  position: absolute;
+  width: 188px;
+  height: 43px;
+  left: 184px;
+  top: 83px;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #000;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+  z-index: 3;
+}
+
+.cat {
+  position: absolute;
+  width: 95px;
+  height: 95px;
+  left: 236px;
+  top: 114px;
+  background-size: cover;
+  z-index: 3;
+}
+
+.pixel-cat {
+  width: 80px;
+  height: 80px;
+  left: 243.5px;
+  top: 121.5px;
+}
+
+.buttons {
+  position: absolute;
+  left: 476.75px;
+  top: 76px;
+  z-index: 3;
+}
+
+.button {
+  width: 25.25px;
+  height: 25.32px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.eatbutton {
+  background: #FC768E;
+}
+
+.playbutton {
+  background: #A3E7FB;
+}
+
+.sleepbutton {
+  background: #B59BF8;
+}
+
+.eat-indicator-frame {
+  position: absolute;
+  width: 36px;
+  height: 19px;
+  left: 423px;
+  top: 76px;
+  background: #F3D4BE;
+  border-radius: 15px;
+  z-index: 6;
+}
+
+.play-indicator-frame {
+  position: absolute;
+  width: 36px;
+  height: 19px;
+  left: 423px;
+  top: 122px;
+  background: #F3D4BE;
+  border-radius: 15px;
+  z-index: 6;
+}
+
+.sleep-indicator-frame {
+  position: absolute;
+  width: 36px;
+  height: 19px;
+  left: 423px;
+  top: 171.06px;
+  background: #F3D4BE;
+  border-radius: 15px;
+  z-index: 6;
+}
+
+.eat-icon {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 9px;
+  top: 1px;
+  background: url("assets/eaticon.png");
+  background-size: cover;
+  z-index: 7;
+}
+
+.play-icon {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 9px;
+  top: 1px;
+  background: url("assets/playicon.png");
+  background-size: cover;
+}
+
+.sleep-icon {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 10px;
+  top: 2px;
+  background: url("assets/sleepicon.png");
+  background-size: cover;
+}
+
+.restart {
+  position: absolute;
+  width: 68px;
+  height: 20px;
+  left: 61px;
+  top: 186px;
+  background: #F3D4BE;
+  border: 1px solid #866D6F;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 11px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.restart-text {
+  position: absolute;
+  width: 54px;
+  height: 17px;
+  left: 7px;
+  top: 3px;
+  font-family: 'Pixelify Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: center;
+  color: #000000;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
