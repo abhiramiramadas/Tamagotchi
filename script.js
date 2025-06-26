@@ -6,14 +6,12 @@ const playBtn = document.getElementById("playBtn");
 const sleepBtn = document.getElementById("sleepBtn");
 const restart = document.getElementById("restart");
 const hearts = [
-  document.getElementById("heart1"),
-  document.getElementById("heart2"),
-  document.getElementById("heart3")
+  document.getElementById("heart1"), // Tied to hunger
+  document.getElementById("heart2"), // Tied to happiness
+  document.getElementById("heart3")  // Tied to energy
 ];
 
-let hunger = 100,
-  happiness = 100,
-  energy = 100;
+let hunger = 100, happiness = 100, energy = 100;
 let isAlive = true;
 let decayRate = 1;
 
@@ -61,8 +59,6 @@ async function startSequence() {
   updateHearts();
 }
 
-
-
 function updateHearts() {
   if (!isAlive) {
     hearts.forEach((heart) => (heart.style.opacity = 0.3));
@@ -87,8 +83,6 @@ function updateHearts() {
     heart.style.opacity = index < heartCount ? 1 : 0.3;
   });
 }
-
-
 
 function decreaseStats() {
   if (!isAlive) return;
@@ -143,6 +137,7 @@ restart.addEventListener("click", () => {
   eatBtn.disabled = false;
   playBtn.disabled = false;
   sleepBtn.disabled = false;
+  cat.style.left = '236px'; // Reset cat position
   updateHearts();
 
   // Animate reset
@@ -159,6 +154,21 @@ restart.addEventListener("click", () => {
     cat.style.animation = "fadeIn 2s ease-in-out 1s forwards";
     startSequence();
   }, 1500);
+});
+
+// Add keyboard controls for cat movement
+document.addEventListener('keydown', (event) => {
+  if (!isAlive) return;
+  const currentLeft = parseFloat(cat.style.left || '236'); // Default to 236px
+  const step = 5; // Pixels to move per key press
+  const minLeft = 164; // Left edge of bg-display
+  const maxLeft = 296; // Right edge of bg-display minus cat width (227 - 95 = 132 + 164 = 296)
+
+  if (event.key === 'ArrowLeft') {
+    cat.style.left = `${Math.max(minLeft, currentLeft - step)}px`;
+  } else if (event.key === 'ArrowRight') {
+    cat.style.left = `${Math.min(maxLeft, currentLeft + step)}px`;
+  }
 });
 
 // Start the intro
